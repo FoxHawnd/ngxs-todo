@@ -1,0 +1,79 @@
+{
+  "uuid": "ba5a4204-9a46-440c-88b5-be07efe1a9e6",
+  "lastMigration": 19,
+  "name": "Ngxs todo",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "50912ec9-bfb8-4922-bd53-fabccdab5a0c",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "tasks",
+      "responses": [
+        {
+          "uuid": "ad0dbf43-73ac-400c-b2f4-501bcf0e90d8",
+          "body": " [\n    {\n      \"name\": \"create website\",\n      \"description\": \"create a site to test ngxs\"\n    },\n    {\n      \"name\": \"go learn things about ngrx\",\n      \"description\": \"develop my skills in state management\"\n    }\n  ]\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}

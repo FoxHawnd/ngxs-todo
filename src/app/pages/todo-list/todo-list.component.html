@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <span class="title-todo">Todo with Ngxs</span>
+    <span class="subpages">
+        <span style="margin-right: 16px" [routerLink]="['']">Todos</span>
+        <span [routerLink]="['/task']">Tasks</span>
+    </span>
+</mat-toolbar>
+<ng-container *ngFor="let todo of todos$ | async">
+    <div class="todos-container">
+        <mat-card class="card-container">
+            <mat-card-title [ngClass]="taskIsDone(todo)" class="todo-name" >{{todo.title}}</mat-card-title>
+            <mat-card-subtitle [ngClass]="taskIsDone(todo)" class="todo-desc" >{{todo.description}}</mat-card-subtitle>
+            <button *ngIf="todo.status !== 'done'" (click)="changeStatusToDone(todo.title, todo.description, todo._id)" color="primary" class="done-btn" mat-raised-button>Done</button>
+            <button *ngIf="todo.status === 'done'" (click)="deleteTodo(todo._id)" color="primary" class="done-btn" mat-raised-button>Delete</button>
+        </mat-card>
+    </div>
+</ng-container>
+<div class="todos-container">
+    <button class="add-todo" color="warn" [routerLink]="['/todo/addtodo']" mat-raised-button>Add todo</button>
+</div>

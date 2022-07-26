@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <span [routerLink]="['']" class="title-todo">Todo with Ngxs</span>
+    <span class="subpages">
+        <span style="margin-right: 16px" [routerLink]="['']">Todos</span>
+        <span>Tasks</span>
+    </span>
+</mat-toolbar>
+<form [formGroup]="form" (ngSubmit)="form.valid && addTodo()">
+    <div class="field-container">
+        <mat-form-field class="todo-field" appearance="outline">
+            <input  formControlName="title" matInput placeholder="Title">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input  formControlName="description"  matInput placeholder="description">
+        </mat-form-field>
+    </div>
+    <button type="submit" mat-raised-button color="primary">Add</button>
+</form>
